@@ -1,0 +1,19 @@
+{
+  "name": "todolist-repl",
+  "version": "1.0.0",
+  "description": "A Todolist cli REPL example application written in NodeJS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js"
+  },
+	"private": true,
+  "author": "Faisal Al-Tameemi",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "lodash": "^4.16.6",
+    "mocha": "^3.1.2",
+    "node-uuid": "^1.4.7"
+  }
+}
