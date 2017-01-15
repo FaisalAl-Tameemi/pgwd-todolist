@@ -3,8 +3,7 @@ const chai = require('chai');
 const assert = chai.assert;
 const should = chai.should();
 
-const todolist = require('../lib/todolist');
-const db = todolist.generateTodoList();
+const db = require('../lib/todolist');
 
 describe('TodoList', () => {
   describe('#all', () => {
@@ -35,9 +34,7 @@ describe('TodoList', () => {
   });
 
   describe('#findByStatus', () => {
-    it('should be able to find all elements having a certain status', () => {
-      // TODO: implement tests
-    });
+    it('should be able to find all elements having a certain status');
   });
 
   describe('#toggleStatusById', () => {
@@ -71,5 +68,9 @@ describe('TodoList', () => {
     it('should return -1 if the ID is not found', () => {
       assert.equal(db.find('abc'), -1);
     });
+  });
+
+  describe('#statusCounts', () => {
+    it('should be able to return an object containing the counts of each status');
   });
 });
