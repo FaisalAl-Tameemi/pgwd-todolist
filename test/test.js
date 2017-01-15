@@ -34,7 +34,13 @@ describe('TodoList', () => {
   });
 
   describe('#findByStatus', () => {
-    it('should be able to find all elements having a certain status');
+    it('should be able to find all elements having a certain status', () => {
+      const origin_count = db.count();
+      const new_todo = db.create('write tests');
+      const results = db.findByStatus(new_todo.is_completed);
+      assert.isArray(results, 'Returned value is not an array')
+      assert.isAbove(results.length, 0, 'Returned array of 0 items');
+    });
   });
 
   describe('#toggleStatusById', () => {
@@ -68,9 +74,5 @@ describe('TodoList', () => {
     it('should return -1 if the ID is not found', () => {
       assert.equal(db.find('abc'), -1);
     });
-  });
-
-  describe('#statusCounts', () => {
-    it('should be able to return an object containing the counts of each status');
   });
 });

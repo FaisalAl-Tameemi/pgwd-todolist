@@ -7,13 +7,13 @@
     "test": "mocha",
     "start": "node app.js"
   },
-	"private": true,
+  "private": true,
   "author": "Faisal Al-Tameemi",
   "license": "MIT",
   "dependencies": {
     "chai": "^3.5.0",
     "lodash": "^4.16.6",
     "mocha": "^3.1.2",
-    "node-uuid": "^1.4.7"
+    "uuid": "^3.0.1"
   }
 }
